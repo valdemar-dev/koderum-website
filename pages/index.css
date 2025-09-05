@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    line-height: normal;
+}
+
+@import "tailwindcss";
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+    --color-text: #e9dcf9;
+    --color-background: #100120;
+    --color-primary: #bb85f6;
+    --color-secondary: #522088;
+    --color-accent: #9637fa;
+}
+
+.grid-lines-mask {
+    --grid-size: 150px;
+    --line-width: 2px;
+    mask-image:
+        repeating-linear-gradient(
+            to bottom,
+            #fff 0 var(--line-width),
+            transparent var(--line-width) var(--grid-size)
+        ),
+        repeating-linear-gradient(
+            to right,
+            #fff 0 var(--line-width),
+            transparent var(--line-width) var(--grid-size)
+        );
+    mask-composite: add;
+    -webkit-mask-image:
+        repeating-linear-gradient(
+            to bottom,
+            #fff 0 var(--line-width),
+            transparent var(--line-width) var(--grid-size)
+        ),
+        repeating-linear-gradient(
+            to right,
+            #fff 0 var(--line-width),
+            transparent var(--line-width) var(--grid-size)
+        );
+    -webkit-mask-composite: source-over;
+}
+
+.holo-bar {
+    background: linear-gradient(90deg,rgba(187, 133, 246, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(187, 133, 246, 1) 100%);
+}
+
+.fade-edges {
+    --fade-width: 20%;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0,
+            #fff var(--fade-width),
+            #fff calc(100% - var(--fade-width)),
+            transparent 100%
+        ),
+        linear-gradient(
+            to right,
+            transparent 0,
+            #fff var(--fade-width),
+            #fff calc(100% - var(--fade-width)),
+            transparent 100%
+        );
+    mask-composite: intersect;
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0,
+            #fff var(--fade-width),
+            #fff calc(100% - var(--fade-width)),
+            transparent 100%
+        ),
+        linear-gradient(
+            to right,
+            transparent 0,
+            #fff var(--fade-width),
+            #fff calc(100% - var(--fade-width)),
+            transparent 100%
+        );
+    -webkit-mask-composite: source-in;
+}
