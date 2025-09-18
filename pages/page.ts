@@ -222,13 +222,13 @@ const Hero = () => div({
     ),
     
     div({
-        class: "z-20 flex justify-center items-center h-full",
+        class: "z-20 flex justify-center sm:pt-0 pt-20 pt-0 sm:items-center h-full",
     },
         div({
-            class: "max-w-[1200px] w-full",
+            class: "max-w-[1200px] w-full pr-6 px-4 sm:px-8",
         },
             h1({
-                class: "tracking-widest text-5xl font-bold w-max relative ml-12",
+                class: "tracking-widest text-2xl sm:text-5xl font-bold w-max relative ml-12",
             },
                 div({
                     class: "relative group",
@@ -253,7 +253,7 @@ const Hero = () => div({
             ),
             
             div({
-                class: "mt-20 text-lg/8 font-semibold max-w-[500px] relative",
+                class: "mt-10 sm:mt-20 text-base/6 sm:text-lg/8 font-semibold max-w-[500px] relative",
             },
                 span(
                 "A keyboard-based text-editor that's lightning fast,",
@@ -272,13 +272,13 @@ const Hero = () => div({
             ),
             
             div({
-                class: "mt-20 flex gap-8 select-none",
+                class: "mt-20 flex flex-wrap flex-row gap-4 sm:gap-8 select-none",
             },
                 div({
                     class: "relative w-max h-max overflow-clip group",
                 },
                     button({
-                        class: "backdrop-blur-md text-2xl pl-10 px-6 py-4 font-semibold tracking-widest relative flex w-max border-[1px] border-text",
+                        class: "backdrop-blur-md sm:text-2xl pl-7 px-4 py-2 sm:pl-10 sm:px-6 sm:py-4 font-semibold tracking-widest relative flex w-max border-[1px] border-text",
                         onClick: createEventListener({
                             eventListener: () => {
                                 const el = document.getElementById("showcase")!;
@@ -315,7 +315,7 @@ const Hero = () => div({
                     class: "relative w-max h-max overflow-clip group",
                 },
                     a({
-                        class: "backdrop-blur-md text-2xl pl-10 px-6 py-4 font-semibold tracking-widest relative flex w-max border-[1px] border-text",
+                        class: "backdrop-blur-md sm:text-2xl pl-7 px-4 py-2 sm:pl-10 sm:px-6 sm:py-4 font-semibold tracking-widest relative flex w-max border-[1px] border-text",
                         target: "_blank",
                         href: "https://github.com/valdemar-dev/koderum",
                     },
@@ -347,10 +347,10 @@ const Hero = () => div({
     ),
     
     div({
-        class: "w-12 h-full absolute top-0 right-0 right-32 bg-primary holo-bar motion-reduce:overflow-hidden pointer-events-none"
+        class: "w-4 sm:w-12 h-full absolute top-0 right-0 md:right-16 lg:right-32 bg-primary holo-bar motion-reduce:overflow-hidden pointer-events-none"
     },
         div({
-            class: "absolute -top-1/2 -transate-y-1/2 h-[250%] w-full bg-white -z-30 blur-[50px]",
+            class: "absolute -top-1/2 -transate-y-1/2 h-[250%] w-full bg-white -z-30 blur-[25px] sm:blur-[50px]",
             id: "holo-bar-flash"
         }),
     ),
@@ -430,22 +430,22 @@ const ShowcaseImage = (
 }
 
 const Showcase = () => div({
-    class: "h-screen w-screen relative -z-10 bg-cover bg-no-repeat pointer-events-auto flex flex-col gap-4 justify-center items-center",
+    class: "h-screen w-screen relative -z-10 bg-cover bg-no-repeat pointer-events-auto flex flex-col gap-4 justify-center items-center px-4",
     style: "background-image: url('/images/showcase-background.png');",
     id: "showcase",
 },
     div({
-        class: "z-20 h-12 w-full -translate-y-1/2 absolute top-0 left-0 bg-primary holo-bar-sideways overflow-visible motion-reduce:overflow-hidden pointer-events-none"
+        class: "z-20 h-4 sm:h-12 w-full -translate-y-1/2 absolute top-0 left-0 bg-primary holo-bar-sideways overflow-visible motion-reduce:overflow-hidden pointer-events-none"
     },
         div({
-            class: "absolute -left-1/2 -transate-x-1/2 w-[250%] h-full bg-white -z-10 blur-[50px]",
+            class: "absolute -left-1/2 -transate-x-1/2 w-[250%] h-full bg-white -z-10 blur-[25px] sm:blur-[50px]",
             id: "holo-bar-flash"
         }),
     ),
     
     
     div({
-        class: "aspect-video h-[70%] relative z-30",
+        class: "aspect-video w-full md:w-[90%] lg:w-[70%] relative z-30",
     },
         div({
             class: "absolute inset-[100px] -z-10 bg-primary blur-[150px] showcase-bg-anim",

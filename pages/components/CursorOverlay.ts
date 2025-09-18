@@ -7,7 +7,15 @@ createLoadHook({
         const el = document.getElementById("cursor");
         const elTwo = document.getElementById("cursor-background");
         
+        
         if (!el || !elTwo) return;
+        
+        if (window.matchMedia('(pointer: coarse)').matches) {
+            el.style.opacity = "0";
+            elTwo.style.display = "hidden";
+            
+            return
+        }
         
         const isClickableAt = (x: number, y: number) => {
             let el = document.elementFromPoint(x, y);
